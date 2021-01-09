@@ -1,0 +1,796 @@
+2021-01-09 14:57:49 Debug: duration=13 rows=2 SHOW TABLES FROM `test`
+2021-01-09 14:57:49 Debug: duration=21 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 14:57:49 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 14:57:49 Debug: duration=2 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 14:57:49 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 14:57:49 Debug: duration=22 rows=8 SHOW FULL COLUMNS FROM `companies`
+2021-01-09 14:57:49 Debug: duration=1 rows=1 SHOW INDEXES FROM `companies`
+2021-01-09 14:57:49 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'companies' AND rc.TABLE_NAME = 'companies'
+2021-01-09 14:57:49 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'companies'
+2021-01-09 14:57:51 Debug: duration=17 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 14:57:51 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 14:57:51 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 14:57:51 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 15:03:53 Debug: duration=18 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 15:03:53 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 15:03:53 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 15:03:53 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 15:03:53 Debug: duration=14 rows=8 SHOW FULL COLUMNS FROM `companies`
+2021-01-09 15:03:53 Debug: duration=1 rows=1 SHOW INDEXES FROM `companies`
+2021-01-09 15:03:53 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'companies' AND rc.TABLE_NAME = 'companies'
+2021-01-09 15:03:53 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'companies'
+2021-01-09 15:03:53 Debug: duration=3 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments`, Companies.id AS `Companies__id`, Companies.company_name AS `Companies__company_name`, Companies.phone_number AS `Companies__phone_number`, Companies.address AS `Companies__address`, Companies.notes AS `Companies__notes`, Companies.add_notes AS `Companies__add_notes`, Companies.internal_notes AS `Companies__internal_notes`, Companies.comments AS `Companies__comments` FROM contacts Contacts LEFT JOIN companies Companies ON Companies.id = (Contacts.company_id) LIMIT 20 OFFSET 0
+2021-01-09 15:03:53 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts LEFT JOIN companies Companies ON Companies.id = (Contacts.company_id)
+2021-01-09 15:06:10 Debug: duration=122 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 15:06:10 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 15:06:10 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 15:06:10 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 15:06:10 Debug: duration=158 rows=8 SHOW FULL COLUMNS FROM `companies`
+2021-01-09 15:06:10 Debug: duration=1 rows=1 SHOW INDEXES FROM `companies`
+2021-01-09 15:06:10 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'companies' AND rc.TABLE_NAME = 'companies'
+2021-01-09 15:06:10 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'companies'
+2021-01-09 15:06:10 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments`, Companies.id AS `Companies__id`, Companies.company_name AS `Companies__company_name`, Companies.phone_number AS `Companies__phone_number`, Companies.address AS `Companies__address`, Companies.notes AS `Companies__notes`, Companies.add_notes AS `Companies__add_notes`, Companies.internal_notes AS `Companies__internal_notes`, Companies.comments AS `Companies__comments` FROM contacts Contacts LEFT JOIN companies Companies ON Companies.id = (Contacts.company_id) LIMIT 20 OFFSET 0
+2021-01-09 15:06:10 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts LEFT JOIN companies Companies ON Companies.id = (Contacts.company_id)
+2021-01-09 15:14:47 Debug: duration=31 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 15:14:47 Debug: duration=2 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 15:14:47 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 15:14:47 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 15:14:47 Debug: duration=15 rows=8 SHOW FULL COLUMNS FROM `companies`
+2021-01-09 15:14:47 Debug: duration=1 rows=1 SHOW INDEXES FROM `companies`
+2021-01-09 15:14:47 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'companies' AND rc.TABLE_NAME = 'companies'
+2021-01-09 15:14:47 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'companies'
+2021-01-09 15:14:47 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments`, Companies.id AS `Companies__id`, Companies.company_name AS `Companies__company_name`, Companies.phone_number AS `Companies__phone_number`, Companies.address AS `Companies__address`, Companies.notes AS `Companies__notes`, Companies.add_notes AS `Companies__add_notes`, Companies.internal_notes AS `Companies__internal_notes`, Companies.comments AS `Companies__comments` FROM contacts Contacts LEFT JOIN companies Companies ON Companies.id = (Contacts.company_id) LIMIT 20 OFFSET 0
+2021-01-09 15:14:47 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts LEFT JOIN companies Companies ON Companies.id = (Contacts.company_id)
+2021-01-09 15:16:44 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments`, Companies.id AS `Companies__id`, Companies.company_name AS `Companies__company_name`, Companies.phone_number AS `Companies__phone_number`, Companies.address AS `Companies__address`, Companies.notes AS `Companies__notes`, Companies.add_notes AS `Companies__add_notes`, Companies.internal_notes AS `Companies__internal_notes`, Companies.comments AS `Companies__comments` FROM contacts Contacts LEFT JOIN companies Companies ON Companies.id = (Contacts.company_id) LIMIT 20 OFFSET 0
+2021-01-09 15:16:44 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts LEFT JOIN companies Companies ON Companies.id = (Contacts.company_id)
+2021-01-09 15:19:41 Debug: duration=18 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 15:19:41 Debug: duration=2 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 15:19:41 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 15:19:41 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 15:23:49 Debug: duration=18 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 15:23:49 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 15:23:49 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 15:23:49 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 15:23:49 Debug: duration=13 rows=8 SHOW FULL COLUMNS FROM `companies`
+2021-01-09 15:23:49 Debug: duration=1 rows=1 SHOW INDEXES FROM `companies`
+2021-01-09 15:23:49 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'companies' AND rc.TABLE_NAME = 'companies'
+2021-01-09 15:23:49 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'companies'
+2021-01-09 15:23:55 Debug: duration=18 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 15:23:55 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 15:23:55 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 15:23:55 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 15:23:55 Debug: duration=5 rows=1000 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts
+2021-01-09 15:24:12 Debug: duration=18 rows=8 SHOW FULL COLUMNS FROM `companies`
+2021-01-09 15:24:12 Debug: duration=1 rows=1 SHOW INDEXES FROM `companies`
+2021-01-09 15:24:12 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'companies' AND rc.TABLE_NAME = 'companies'
+2021-01-09 15:24:12 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'companies'
+2021-01-09 15:24:12 Debug: duration=2 rows=200 SELECT Companies.id AS `Companies__id` FROM companies Companies LIMIT 200
+2021-01-09 15:24:28 Debug: duration=5 rows=1000 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts
+2021-01-09 15:24:50 Debug: duration=5 rows=1000 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts
+2021-01-09 15:25:03 Debug: duration=4 rows=1000 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts
+2021-01-09 15:33:34 Debug: duration=19 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 15:33:34 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 15:33:34 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 15:33:34 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 15:33:34 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts LIMIT 20 OFFSET 0
+2021-01-09 15:33:34 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 15:33:46 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts LIMIT 20 OFFSET 0
+2021-01-09 15:33:46 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 15:36:44 Debug: duration=17 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 15:36:44 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 15:36:44 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 15:36:44 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 15:36:44 Debug: duration=0 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts LIMIT 20 OFFSET 0
+2021-01-09 15:36:44 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 15:39:19 Debug: duration=20 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 15:39:19 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 15:39:19 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 15:39:19 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 15:39:19 Debug: duration=0 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts LIMIT 20 OFFSET 0
+2021-01-09 15:39:19 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 15:40:40 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts LIMIT 20 OFFSET 0
+2021-01-09 15:40:40 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 15:40:42 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts LIMIT 20 OFFSET 0
+2021-01-09 15:40:42 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 15:40:48 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts LIMIT 20 OFFSET 0
+2021-01-09 15:40:48 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 15:41:53 Debug: duration=1 rows=2 SHOW TABLES FROM `test`
+2021-01-09 15:41:53 Debug: duration=21 rows=8 SHOW FULL COLUMNS FROM `companies`
+2021-01-09 15:41:53 Debug: duration=1 rows=1 SHOW INDEXES FROM `companies`
+2021-01-09 15:41:53 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'companies' AND rc.TABLE_NAME = 'companies'
+2021-01-09 15:41:53 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'companies'
+2021-01-09 15:41:53 Debug: duration=13 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 15:41:53 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 15:41:53 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 15:41:53 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 15:41:53 Debug: duration=13 rows=8 SHOW FULL COLUMNS FROM `companies`
+2021-01-09 15:41:53 Debug: duration=1 rows=1 SHOW INDEXES FROM `companies`
+2021-01-09 15:41:53 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'companies' AND rc.TABLE_NAME = 'companies'
+2021-01-09 15:41:53 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'companies'
+2021-01-09 15:42:29 Debug: duration=19 rows=8 SHOW FULL COLUMNS FROM `companies`
+2021-01-09 15:42:29 Debug: duration=2 rows=1 SHOW INDEXES FROM `companies`
+2021-01-09 15:42:29 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'companies' AND rc.TABLE_NAME = 'companies'
+2021-01-09 15:42:29 Debug: duration=2 rows=1 SHOW TABLE STATUS WHERE Name = 'companies'
+2021-01-09 15:42:29 Debug: duration=1 rows=20 SELECT Companies.id AS `Companies__id`, Companies.company_name AS `Companies__company_name`, Companies.phone_number AS `Companies__phone_number`, Companies.address AS `Companies__address`, Companies.notes AS `Companies__notes`, Companies.add_notes AS `Companies__add_notes`, Companies.internal_notes AS `Companies__internal_notes`, Companies.comments AS `Companies__comments` FROM companies Companies LIMIT 20 OFFSET 0
+2021-01-09 15:42:29 Debug: duration=12 rows=1 SELECT (COUNT(*)) AS `count` FROM companies Companies
+2021-01-09 15:42:59 Debug: duration=21 rows=8 SHOW FULL COLUMNS FROM `companies`
+2021-01-09 15:42:59 Debug: duration=1 rows=1 SHOW INDEXES FROM `companies`
+2021-01-09 15:42:59 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'companies' AND rc.TABLE_NAME = 'companies'
+2021-01-09 15:42:59 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'companies'
+2021-01-09 15:42:59 Debug: duration=13 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 15:42:59 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 15:42:59 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 15:42:59 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 15:43:02 Debug: duration=1 rows=20 SELECT Companies.id AS `Companies__id`, Companies.company_name AS `Companies__company_name`, Companies.phone_number AS `Companies__phone_number`, Companies.address AS `Companies__address`, Companies.notes AS `Companies__notes`, Companies.add_notes AS `Companies__add_notes`, Companies.internal_notes AS `Companies__internal_notes`, Companies.comments AS `Companies__comments` FROM companies Companies LIMIT 20 OFFSET 0
+2021-01-09 15:43:02 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM companies Companies
+2021-01-09 15:43:04 Debug: duration=17 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 15:43:04 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 15:43:04 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 15:43:04 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 15:43:05 Debug: duration=1 rows=200 SELECT Companies.id AS `Companies__id` FROM companies Companies LIMIT 200
+2021-01-09 15:43:10 Debug: duration=1 rows=20 SELECT Companies.id AS `Companies__id`, Companies.company_name AS `Companies__company_name`, Companies.phone_number AS `Companies__phone_number`, Companies.address AS `Companies__address`, Companies.notes AS `Companies__notes`, Companies.add_notes AS `Companies__add_notes`, Companies.internal_notes AS `Companies__internal_notes`, Companies.comments AS `Companies__comments` FROM companies Companies LIMIT 20 OFFSET 0
+2021-01-09 15:43:10 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM companies Companies
+2021-01-09 15:43:20 Debug: duration=1 rows=20 SELECT Companies.id AS `Companies__id`, Companies.company_name AS `Companies__company_name`, Companies.phone_number AS `Companies__phone_number`, Companies.address AS `Companies__address`, Companies.notes AS `Companies__notes`, Companies.add_notes AS `Companies__add_notes`, Companies.internal_notes AS `Companies__internal_notes`, Companies.comments AS `Companies__comments` FROM companies Companies LIMIT 20 OFFSET 0
+2021-01-09 15:43:20 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM companies Companies
+2021-01-09 15:43:30 Debug: duration=0 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts LIMIT 20 OFFSET 0
+2021-01-09 15:43:30 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 15:43:34 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts LIMIT 20 OFFSET 0
+2021-01-09 15:43:34 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 15:44:38 Debug: duration=18 rows=8 SHOW FULL COLUMNS FROM `companies`
+2021-01-09 15:44:38 Debug: duration=1 rows=1 SHOW INDEXES FROM `companies`
+2021-01-09 15:44:38 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'companies' AND rc.TABLE_NAME = 'companies'
+2021-01-09 15:44:38 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'companies'
+2021-01-09 15:44:38 Debug: duration=0 rows=1 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments`, Companies.id AS `Companies__id`, Companies.company_name AS `Companies__company_name`, Companies.phone_number AS `Companies__phone_number`, Companies.address AS `Companies__address`, Companies.notes AS `Companies__notes`, Companies.add_notes AS `Companies__add_notes`, Companies.internal_notes AS `Companies__internal_notes`, Companies.comments AS `Companies__comments` FROM contacts Contacts LEFT JOIN companies Companies ON Companies.id = (Contacts.company_id) WHERE Contacts.id = 1 LIMIT 1
+2021-01-09 15:44:49 Debug: duration=1 rows=1 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments`, Companies.id AS `Companies__id`, Companies.company_name AS `Companies__company_name`, Companies.phone_number AS `Companies__phone_number`, Companies.address AS `Companies__address`, Companies.notes AS `Companies__notes`, Companies.add_notes AS `Companies__add_notes`, Companies.internal_notes AS `Companies__internal_notes`, Companies.comments AS `Companies__comments` FROM contacts Contacts LEFT JOIN companies Companies ON Companies.id = (Contacts.company_id) WHERE Contacts.id = 1 LIMIT 1
+2021-01-09 15:44:57 Debug: duration=0 rows=1 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts WHERE Contacts.id = 1 LIMIT 1
+2021-01-09 15:44:57 Debug: duration=0 rows=200 SELECT Companies.id AS `Companies__id` FROM companies Companies LIMIT 200
+2021-01-09 15:46:06 Debug: duration=20 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 15:46:06 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 15:46:06 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 15:46:06 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 15:46:06 Debug: duration=0 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts LIMIT 20 OFFSET 0
+2021-01-09 15:46:06 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 15:49:03 Debug: duration=18 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 15:49:03 Debug: duration=2 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 15:49:03 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 15:49:03 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 15:49:03 Debug: duration=0 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts LIMIT 20 OFFSET 0
+2021-01-09 15:49:03 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 15:49:10 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts LIMIT 20 OFFSET 160
+2021-01-09 15:49:10 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 15:51:27 Debug: duration=19 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 15:51:27 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 15:51:27 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 15:51:27 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 15:51:28 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts LIMIT 20 OFFSET 980
+2021-01-09 15:51:28 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 15:51:30 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts ORDER BY Contacts.company_id asc LIMIT 20 OFFSET 0
+2021-01-09 15:51:30 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 15:51:32 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts ORDER BY Contacts.company_id desc LIMIT 20 OFFSET 0
+2021-01-09 15:51:32 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 15:52:25 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts ORDER BY Contacts.id asc LIMIT 20 OFFSET 0
+2021-01-09 15:52:25 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 15:57:19 Debug: duration=18 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 15:57:19 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 15:57:19 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 15:57:19 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 15:57:19 Debug: duration=0 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts ORDER BY Contacts.id asc LIMIT 20 OFFSET 0
+2021-01-09 15:57:19 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 15:57:21 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts ORDER BY Contacts.id asc LIMIT 20 OFFSET 0
+2021-01-09 15:57:21 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 15:58:48 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts ORDER BY Contacts.id asc LIMIT 20 OFFSET 0
+2021-01-09 15:58:48 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 15:58:49 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts ORDER BY Contacts.id asc LIMIT 20 OFFSET 0
+2021-01-09 15:58:49 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 15:58:53 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts ORDER BY Contacts.id asc LIMIT 20 OFFSET 20
+2021-01-09 15:58:53 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 16:02:48 Debug: duration=17 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 16:02:48 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 16:02:48 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 16:02:48 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 16:02:48 Debug: duration=0 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts ORDER BY Contacts.id asc LIMIT 20 OFFSET 20
+2021-01-09 16:02:48 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 16:02:53 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts ORDER BY Contacts.id asc LIMIT 20 OFFSET 20
+2021-01-09 16:02:53 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 16:03:34 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts ORDER BY Contacts.id asc LIMIT 20 OFFSET 20
+2021-01-09 16:03:34 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 16:03:43 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts ORDER BY Contacts.id asc LIMIT 20 OFFSET 20
+2021-01-09 16:03:43 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 16:14:01 Debug: duration=19 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 16:14:01 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 16:14:01 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 16:14:01 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 16:14:01 Debug: duration=0 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts ORDER BY Contacts.id asc LIMIT 20 OFFSET 20
+2021-01-09 16:14:01 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 16:14:03 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts ORDER BY Contacts.id asc LIMIT 20 OFFSET 20
+2021-01-09 16:14:03 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 16:20:12 Debug: duration=19 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 16:20:12 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 16:20:12 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 16:20:12 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 16:20:12 Debug: duration=14 rows=8 SHOW FULL COLUMNS FROM `companies`
+2021-01-09 16:20:12 Debug: duration=1 rows=1 SHOW INDEXES FROM `companies`
+2021-01-09 16:20:12 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'companies' AND rc.TABLE_NAME = 'companies'
+2021-01-09 16:20:12 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'companies'
+2021-01-09 16:20:12 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments`, Companies.id AS `Companies__id`, Companies.company_name AS `Companies__company_name`, Companies.phone_number AS `Companies__phone_number`, Companies.address AS `Companies__address`, Companies.notes AS `Companies__notes`, Companies.add_notes AS `Companies__add_notes`, Companies.internal_notes AS `Companies__internal_notes`, Companies.comments AS `Companies__comments` FROM contacts Contacts LEFT JOIN companies Companies ON Companies.id = (Contacts.company_id) LIMIT 20 OFFSET 0
+2021-01-09 16:20:12 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts LEFT JOIN companies Companies ON Companies.id = (Contacts.company_id)
+2021-01-09 16:20:18 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts LIMIT 20 OFFSET 0
+2021-01-09 16:20:18 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 16:20:24 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments`, Companies.id AS `Companies__id`, Companies.company_name AS `Companies__company_name`, Companies.phone_number AS `Companies__phone_number`, Companies.address AS `Companies__address`, Companies.notes AS `Companies__notes`, Companies.add_notes AS `Companies__add_notes`, Companies.internal_notes AS `Companies__internal_notes`, Companies.comments AS `Companies__comments` FROM contacts Contacts LEFT JOIN companies Companies ON Companies.id = (Contacts.company_id) LIMIT 20 OFFSET 0
+2021-01-09 16:20:24 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts LEFT JOIN companies Companies ON Companies.id = (Contacts.company_id)
+2021-01-09 16:20:43 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments`, Companies.id AS `Companies__id`, Companies.company_name AS `Companies__company_name`, Companies.phone_number AS `Companies__phone_number`, Companies.address AS `Companies__address`, Companies.notes AS `Companies__notes`, Companies.add_notes AS `Companies__add_notes`, Companies.internal_notes AS `Companies__internal_notes`, Companies.comments AS `Companies__comments` FROM contacts Contacts LEFT JOIN companies Companies ON Companies.id = (Contacts.company_id) LIMIT 20 OFFSET 0
+2021-01-09 16:20:43 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts LEFT JOIN companies Companies ON Companies.id = (Contacts.company_id)
+2021-01-09 16:20:51 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments`, Companies.id AS `Companies__id`, Companies.company_name AS `Companies__company_name`, Companies.phone_number AS `Companies__phone_number`, Companies.address AS `Companies__address`, Companies.notes AS `Companies__notes`, Companies.add_notes AS `Companies__add_notes`, Companies.internal_notes AS `Companies__internal_notes`, Companies.comments AS `Companies__comments` FROM contacts Contacts LEFT JOIN companies Companies ON Companies.id = (Contacts.company_id) LIMIT 20 OFFSET 0
+2021-01-09 16:20:51 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts LEFT JOIN companies Companies ON Companies.id = (Contacts.company_id)
+2021-01-09 16:41:44 Debug: duration=20 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 16:41:44 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 16:41:44 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 16:41:44 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 16:41:44 Debug: duration=15 rows=8 SHOW FULL COLUMNS FROM `companies`
+2021-01-09 16:41:44 Debug: duration=1 rows=1 SHOW INDEXES FROM `companies`
+2021-01-09 16:41:44 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'companies' AND rc.TABLE_NAME = 'companies'
+2021-01-09 16:41:44 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'companies'
+2021-01-09 16:41:57 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts LIMIT 20 OFFSET 0
+2021-01-09 16:41:57 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 16:44:34 Debug: duration=19 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 16:44:34 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 16:44:34 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 16:44:34 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 16:44:34 Debug: duration=14 rows=8 SHOW FULL COLUMNS FROM `companies`
+2021-01-09 16:44:34 Debug: duration=1 rows=1 SHOW INDEXES FROM `companies`
+2021-01-09 16:44:34 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'companies' AND rc.TABLE_NAME = 'companies'
+2021-01-09 16:44:34 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'companies'
+2021-01-09 16:46:35 Debug: duration=19 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 16:46:35 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 16:46:35 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 16:46:35 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 16:46:35 Debug: duration=15 rows=8 SHOW FULL COLUMNS FROM `companies`
+2021-01-09 16:46:35 Debug: duration=1 rows=1 SHOW INDEXES FROM `companies`
+2021-01-09 16:46:35 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'companies' AND rc.TABLE_NAME = 'companies'
+2021-01-09 16:46:35 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'companies'
+2021-01-09 16:56:24 Debug: duration=19 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 16:56:24 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 16:56:24 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 16:56:24 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 16:56:24 Debug: duration=14 rows=8 SHOW FULL COLUMNS FROM `companies`
+2021-01-09 16:56:24 Debug: duration=1 rows=1 SHOW INDEXES FROM `companies`
+2021-01-09 16:56:24 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'companies' AND rc.TABLE_NAME = 'companies'
+2021-01-09 16:56:24 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'companies'
+2021-01-09 16:58:42 Debug: duration=18 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 16:58:42 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 16:58:42 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 16:58:42 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 16:58:42 Debug: duration=15 rows=8 SHOW FULL COLUMNS FROM `companies`
+2021-01-09 16:58:42 Debug: duration=1 rows=1 SHOW INDEXES FROM `companies`
+2021-01-09 16:58:42 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'companies' AND rc.TABLE_NAME = 'companies'
+2021-01-09 16:58:42 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'companies'
+2021-01-09 17:00:27 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts LIMIT 20 OFFSET 0
+2021-01-09 17:00:27 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 17:03:19 Debug: duration=19 rows=8 SHOW FULL COLUMNS FROM `companies`
+2021-01-09 17:03:19 Debug: duration=1 rows=1 SHOW INDEXES FROM `companies`
+2021-01-09 17:03:19 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'companies' AND rc.TABLE_NAME = 'companies'
+2021-01-09 17:03:19 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'companies'
+2021-01-09 17:03:19 Debug: duration=15 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 17:03:19 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 17:03:19 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 17:03:19 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 17:03:19 Debug: duration=0 rows=200 SELECT Companies.id AS `Companies__id` FROM companies Companies LIMIT 200
+2021-01-09 17:05:21 Debug: duration=18 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 17:05:21 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 17:05:21 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 17:05:21 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 17:05:21 Debug: duration=0 rows=0 BEGIN
+2021-01-09 17:05:21 Debug: duration=1 rows=1 INSERT INTO contacts (first_name, last_name, phone_number, address, notes, add_notes, internal_notes, comments) VALUES ('ha', 'ku', '123123', 'qqq', 'www', '222', 'qq', 'sss')
+2021-01-09 17:05:21 Debug: duration=0 rows=0 COMMIT
+2021-01-09 17:05:21 Debug: duration=13 rows=8 SHOW FULL COLUMNS FROM `companies`
+2021-01-09 17:05:21 Debug: duration=1 rows=1 SHOW INDEXES FROM `companies`
+2021-01-09 17:05:21 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'companies' AND rc.TABLE_NAME = 'companies'
+2021-01-09 17:05:21 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'companies'
+2021-01-09 17:05:54 Debug: duration=0 rows=0 BEGIN
+2021-01-09 17:05:54 Debug: duration=0 rows=0 INSERT INTO contacts (first_name, last_name, phone_number, address, notes, add_notes, internal_notes, comments) VALUES ('ha', 'ku2', '123123', 'qqq', 'www', '222', 'qq', 'sss')
+2021-01-09 17:05:54 Debug: duration=0 rows=0 ROLLBACK
+2021-01-09 17:06:44 Debug: duration=0 rows=0 BEGIN
+2021-01-09 17:06:44 Debug: duration=0 rows=0 INSERT INTO contacts (first_name, last_name, phone_number, address, notes, add_notes, internal_notes, comments) VALUES ('ha2', 'ku2', '123123', 'qqq', 'www', '222', 'qq', 'sss')
+2021-01-09 17:06:44 Debug: duration=0 rows=0 ROLLBACK
+2021-01-09 17:07:02 Debug: duration=0 rows=0 BEGIN
+2021-01-09 17:07:02 Debug: duration=1 rows=1 INSERT INTO contacts (first_name, last_name, phone_number, address, notes, add_notes, internal_notes, comments) VALUES ('ha2', 'ku2', '123123', 'qqq', 'www', '222', 'qq', 'sss')
+2021-01-09 17:07:02 Debug: duration=0 rows=0 COMMIT
+2021-01-09 17:17:03 Debug: duration=17 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 17:17:03 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 17:17:03 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 17:17:03 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 17:18:19 Debug: duration=1 rows=1001 SELECT Contacts.id AS `Contacts__id` FROM contacts Contacts
+2021-01-09 17:21:14 Debug: duration=19 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 17:21:14 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 17:21:14 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 17:21:14 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 17:21:14 Debug: duration=2 rows=1001 SELECT Contacts.id AS `Contacts__id` FROM contacts Contacts
+2021-01-09 17:21:43 Debug: duration=1 rows=1001 SELECT Contacts.id AS `Contacts__id` FROM contacts Contacts
+2021-01-09 17:21:43 Debug: duration=0 rows=0 BEGIN
+2021-01-09 17:21:43 Debug: duration=1 rows=1 SELECT 1 AS `existing` FROM contacts Contacts WHERE Contacts.id = 2 LIMIT 1
+2021-01-09 17:21:43 Debug: duration=1 rows=1 UPDATE contacts SET first_name = 'ha2' , last_name = 'ku2' , phone_number = '123123' , address = 'qqq' , notes = 'www' , add_notes = '222' , internal_notes = 'qq' , comments = 'sss' WHERE id = 2
+2021-01-09 17:21:43 Debug: duration=0 rows=0 COMMIT
+2021-01-09 17:21:43 Debug: duration=18 rows=8 SHOW FULL COLUMNS FROM `companies`
+2021-01-09 17:21:43 Debug: duration=1 rows=1 SHOW INDEXES FROM `companies`
+2021-01-09 17:21:43 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'companies' AND rc.TABLE_NAME = 'companies'
+2021-01-09 17:21:43 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'companies'
+2021-01-09 17:21:54 Debug: duration=2 rows=1001 SELECT Contacts.id AS `Contacts__id` FROM contacts Contacts
+2021-01-09 17:21:54 Debug: duration=0 rows=0 BEGIN
+2021-01-09 17:21:54 Debug: duration=0 rows=1 SELECT 1 AS `existing` FROM contacts Contacts WHERE Contacts.id = 2 LIMIT 1
+2021-01-09 17:21:54 Debug: duration=0 rows=0 UPDATE contacts SET first_name = 'ha2' , last_name = 'ku2' , phone_number = '123123' , address = 'qqq' , notes = 'www' , add_notes = '222' , internal_notes = 'qq' , comments = 'sss' WHERE id = 2
+2021-01-09 17:21:54 Debug: duration=0 rows=0 COMMIT
+2021-01-09 17:22:48 Debug: duration=1 rows=1001 SELECT Contacts.id AS `Contacts__id` FROM contacts Contacts
+2021-01-09 17:23:08 Debug: duration=1 rows=1001 SELECT Contacts.id AS `Contacts__id` FROM contacts Contacts
+2021-01-09 17:29:25 Debug: duration=19 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 17:29:25 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 17:29:25 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 17:29:25 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 17:29:25 Debug: duration=1 rows=1001 SELECT Contacts.id AS `Contacts__id` FROM contacts Contacts
+2021-01-09 17:29:58 Debug: duration=1 rows=1001 SELECT Contacts.id AS `Contacts__id` FROM contacts Contacts
+2021-01-09 17:30:37 Debug: duration=2 rows=1001 SELECT Contacts.id AS `Contacts__id` FROM contacts Contacts
+2021-01-09 17:31:13 Debug: duration=1 rows=1001 SELECT Contacts.id AS `Contacts__id` FROM contacts Contacts
+2021-01-09 17:31:33 Debug: duration=17 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 17:31:33 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 17:31:33 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 17:31:33 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 17:31:33 Debug: duration=1 rows=1001 SELECT Contacts.id AS `Contacts__id` FROM contacts Contacts
+2021-01-09 17:31:48 Debug: duration=2 rows=1001 SELECT Contacts.id AS `Contacts__id` FROM contacts Contacts
+2021-01-09 17:31:48 Debug: duration=0 rows=0 BEGIN
+2021-01-09 17:31:48 Debug: duration=0 rows=0 ROLLBACK
+2021-01-09 17:38:25 Debug: duration=19 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 17:38:25 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 17:38:25 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 17:38:25 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 17:38:25 Debug: duration=1 rows=1001 SELECT Contacts.id AS `Contacts__id` FROM contacts Contacts
+2021-01-09 17:38:25 Debug: duration=0 rows=0 BEGIN
+2021-01-09 17:38:25 Debug: duration=0 rows=0 ROLLBACK
+2021-01-09 18:00:28 Debug: duration=19 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 18:00:28 Debug: duration=2 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 18:00:28 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 18:00:28 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 18:00:28 Debug: duration=1 rows=1001 SELECT Contacts.id AS `Contacts__id` FROM contacts Contacts
+2021-01-09 18:00:28 Debug: duration=0 rows=0 BEGIN
+2021-01-09 18:00:28 Debug: duration=0 rows=0 ROLLBACK
+2021-01-09 18:00:42 Debug: duration=2 rows=1001 SELECT Contacts.id AS `Contacts__id` FROM contacts Contacts
+2021-01-09 18:00:42 Debug: duration=0 rows=0 BEGIN
+2021-01-09 18:00:42 Debug: duration=0 rows=0 ROLLBACK
+2021-01-09 18:01:20 Debug: duration=1 rows=1001 SELECT Contacts.id AS `Contacts__id` FROM contacts Contacts
+2021-01-09 18:01:33 Debug: duration=2 rows=1001 SELECT Contacts.id AS `Contacts__id` FROM contacts Contacts
+2021-01-09 18:01:44 Debug: duration=2 rows=1001 SELECT Contacts.id AS `Contacts__id` FROM contacts Contacts
+2021-01-09 18:01:51 Debug: duration=1 rows=1001 SELECT Contacts.id AS `Contacts__id` FROM contacts Contacts
+2021-01-09 18:01:59 Debug: duration=1 rows=1001 SELECT Contacts.id AS `Contacts__id` FROM contacts Contacts
+2021-01-09 18:02:51 Debug: duration=18 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 18:02:51 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 18:02:51 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 18:02:51 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 18:02:51 Debug: duration=1 rows=1001 SELECT Contacts.id AS `Contacts__id` FROM contacts Contacts
+2021-01-09 18:02:58 Debug: duration=2 rows=1001 SELECT Contacts.id AS `Contacts__id` FROM contacts Contacts
+2021-01-09 18:04:57 Debug: duration=18 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 18:04:57 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 18:04:57 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 18:04:57 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 18:04:57 Debug: duration=1 rows=1001 SELECT Contacts.id AS `Contacts__id` FROM contacts Contacts
+2021-01-09 18:04:57 Debug: duration=0 rows=0 BEGIN
+2021-01-09 18:04:57 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM contacts Contacts WHERE Contacts.id = 1001 LIMIT 1
+2021-01-09 18:04:57 Debug: duration=1 rows=1 INSERT INTO contacts (id, first_name, last_name, phone_number, address, notes, add_notes, internal_notes, comments) VALUES (1001, 'ha2', 'ku2', '123123', 'qqq', 'www', '222', 'qq', 'sss')
+2021-01-09 18:04:57 Debug: duration=0 rows=0 COMMIT
+2021-01-09 18:04:57 Debug: duration=14 rows=8 SHOW FULL COLUMNS FROM `companies`
+2021-01-09 18:04:57 Debug: duration=1 rows=1 SHOW INDEXES FROM `companies`
+2021-01-09 18:04:57 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'companies' AND rc.TABLE_NAME = 'companies'
+2021-01-09 18:04:57 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'companies'
+2021-01-09 18:06:18 Debug: duration=2 rows=1002 SELECT Contacts.id AS `Contacts__id` FROM contacts Contacts
+2021-01-09 18:06:18 Debug: duration=0 rows=0 BEGIN
+2021-01-09 18:06:18 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM contacts Contacts WHERE Contacts.id = 1002 LIMIT 1
+2021-01-09 18:06:18 Debug: duration=1 rows=1 INSERT INTO contacts (id, first_name, last_name, phone_number, address, notes, add_notes, internal_notes, comments) VALUES (1002, 'ha2', 'ku2', '123123', 'qqq', 'www', '222', 'qq', 'sss')
+2021-01-09 18:06:18 Debug: duration=0 rows=0 COMMIT
+2021-01-09 18:12:00 Debug: duration=21 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 18:12:00 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 18:12:00 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 18:12:00 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 18:12:00 Debug: duration=0 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts LIMIT 20 OFFSET 0
+2021-01-09 18:12:00 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 18:12:05 Debug: duration=17 rows=8 SHOW FULL COLUMNS FROM `companies`
+2021-01-09 18:12:05 Debug: duration=1 rows=1 SHOW INDEXES FROM `companies`
+2021-01-09 18:12:05 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'companies' AND rc.TABLE_NAME = 'companies'
+2021-01-09 18:12:05 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'companies'
+2021-01-09 18:12:09 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts LIMIT 20 OFFSET 0
+2021-01-09 18:12:09 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 18:14:45 Debug: duration=19 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 18:14:45 Debug: duration=1 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 18:14:45 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 18:14:45 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 18:14:45 Debug: duration=1 rows=1003 SELECT Contacts.id AS `Contacts__id` FROM contacts Contacts
+2021-01-09 18:14:45 Debug: duration=0 rows=0 BEGIN
+2021-01-09 18:14:45 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM contacts Contacts WHERE Contacts.id = 1003 LIMIT 1
+2021-01-09 18:14:45 Debug: duration=1 rows=1 INSERT INTO contacts (id, first_name, last_name, phone_number, address, notes, add_notes, internal_notes, comments) VALUES (1003, 'ha2', 'ku2', '123123', 'qqq', 'www', '222', 'qq', 'sss')
+2021-01-09 18:14:45 Debug: duration=0 rows=0 COMMIT
+2021-01-09 18:14:45 Debug: duration=13 rows=8 SHOW FULL COLUMNS FROM `companies`
+2021-01-09 18:14:45 Debug: duration=1 rows=1 SHOW INDEXES FROM `companies`
+2021-01-09 18:14:45 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'companies' AND rc.TABLE_NAME = 'companies'
+2021-01-09 18:14:45 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'companies'
+2021-01-09 18:14:55 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts LIMIT 20 OFFSET 0
+2021-01-09 18:14:55 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 18:15:29 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts LIMIT 20 OFFSET 0
+2021-01-09 18:15:29 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 18:15:34 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts LIMIT 20 OFFSET 20
+2021-01-09 18:15:34 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 18:15:46 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts LIMIT 20 OFFSET 20
+2021-01-09 18:15:46 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
+2021-01-09 18:27:01 Debug: duration=19 rows=10 SHOW FULL COLUMNS FROM `contacts`
+2021-01-09 18:27:01 Debug: duration=2 rows=1 SHOW INDEXES FROM `contacts`
+2021-01-09 18:27:01 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'test' AND kcu.TABLE_NAME = 'contacts' AND rc.TABLE_NAME = 'contacts'
+2021-01-09 18:27:01 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'contacts'
+2021-01-09 18:27:01 Debug: duration=1 rows=20 SELECT Contacts.id AS `Contacts__id`, Contacts.first_name AS `Contacts__first_name`, Contacts.last_name AS `Contacts__last_name`, Contacts.phone_number AS `Contacts__phone_number`, Contacts.address AS `Contacts__address`, Contacts.company_id AS `Contacts__company_id`, Contacts.notes AS `Contacts__notes`, Contacts.add_notes AS `Contacts__add_notes`, Contacts.internal_notes AS `Contacts__internal_notes`, Contacts.comments AS `Contacts__comments` FROM contacts Contacts LIMIT 20 OFFSET 20
+2021-01-09 18:27:01 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM contacts Contacts
